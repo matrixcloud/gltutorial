@@ -69,7 +69,7 @@ void CGLWidget::paintGL()
 
     QMatrix4x4 m, v, p;
     m.setToIdentity();
-    v.lookAt(QVector3D(4, 3, -3), QVector3D(0, 0, 0), QVector3D(0, 1, 0));
+    v.lookAt(QVector3D(0, 0, 5), QVector3D(0, 0, 0), QVector3D(0, 1, 0));
     p.perspective(45.0f,  4.0f / 3.0f, 0.1f, 100.0f);
     QMatrix4x4 mvp = p * v * m;
 
@@ -100,7 +100,7 @@ void CGLWidget::setupVertexAttribs()
 void CGLWidget::loadGLTexture()
 {
     QImage buff;
-    if(!buff.load(":/media/tex.bmp"))
+    if(!buff.load(":/media/uvmap.DDS"))
     {
         qDebug() << "can't load texture file...";
         QImage dummy(128, 128, QImage::Format::Format_RGB32);
