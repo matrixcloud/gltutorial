@@ -11,6 +11,7 @@ out vec2 uv;
 out vec3 normal_cameraspace;
 out vec3 lightDir_cameraspace;
 out vec3 position_worldspace;
+out vec3 eyeDir_cameraspace;
 
 void main(void)
 {
@@ -21,7 +22,7 @@ void main(void)
 
     vec3 lightPosition_cameraspace = vec4(v * vec4(lightPosition_worldspace, 1)).xyz;
     vec3 vertexPosition_cameraspace = vec4(v * m * vec4(vertexNormal_modelspace, 1)).xyz;
-    vec3 eyeDir_cameraspace = vec3(0, 0, 0) - vertexPosition_cameraspace;
+    eyeDir_cameraspace = vec3(0, 0, 0) - vertexPosition_cameraspace;
     lightDir_cameraspace = lightPosition_cameraspace + eyeDir_cameraspace;
 
     position_worldspace = vec4(m * vec4(vertexPosition_modelspace, 1)).xyz;
