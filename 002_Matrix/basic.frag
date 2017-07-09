@@ -1,3 +1,4 @@
+#version 400
 out vec3 color;
 
 void main(void)

@@ -1,3 +1,4 @@
+#version 400
 in vec2 uv;
 out vec3 color;
 uniform sampler2D texSampler;

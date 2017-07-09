@@ -1,0 +1,9 @@
+<RCC>
+    <qresource prefix="/">
+        <file>texture/diffuse.DDS</file>
+        <file>texture/normal.bmp</file>
+        <file>texture/specular.DDS</file>
+        <file>shader/basic.frag</file>
+        <file>shader/basic.vert</file>
+    </qresource>
+</RCC>
